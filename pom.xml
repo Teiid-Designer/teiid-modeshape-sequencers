@@ -29,7 +29,7 @@
     <!-- ================================================================== -->
     <properties>
         <hamcrest.version>1.3</hamcrest.version>
-        <jboss.kit.modules.location>modules/system/layers/dv/org/jboss/teiid/modeshape/sequencer</jboss.kit.modules.location>
+        <jboss.kit.modules.location>modules/system/layers/dv/org/jboss/teiid/modeshape/</jboss.kit.modules.location>
         <jboss.scripts.location>cli-scripts</jboss.scripts.location>
         <jboss.vdb.location>dataVirtualization/vdb</jboss.vdb.location>
         <junit.version>4.12</junit.version>

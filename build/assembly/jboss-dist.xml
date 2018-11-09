@@ -18,7 +18,7 @@
             </includes>
 
             <binaries>
-                <outputDirectory>${jboss.kit.modules.location}/ddl/main</outputDirectory>
+                <outputDirectory>${jboss.kit.modules.location}/sequencer/ddl/main</outputDirectory>
                 <includeDependencies>false</includeDependencies>
                 <unpack>false</unpack>
             </binaries>
@@ -33,7 +33,35 @@
             </includes>
 
             <binaries>
-                <outputDirectory>${jboss.kit.modules.location}/vdb/main</outputDirectory>
+                <outputDirectory>${jboss.kit.modules.location}/sequencer/vdb/main</outputDirectory>
+                <includeDependencies>false</includeDependencies>
+                <unpack>false</unpack>
+            </binaries>
+        </moduleSet>
+
+        <moduleSet>
+            <useAllReactorProjects>true</useAllReactorProjects>
+
+            <includes>
+                <include>org.jboss.teiid.modeshape:teiid-modeshape-sequencer-dataservice</include>
+            </includes>
+
+            <binaries>
+                <outputDirectory>${jboss.kit.modules.location}/sequencer/dataservice/main</outputDirectory>
+                <includeDependencies>false</includeDependencies>
+                <unpack>false</unpack>
+            </binaries>
+        </moduleSet>
+
+        <moduleSet>
+            <useAllReactorProjects>true</useAllReactorProjects>
+
+            <includes>
+                <include>org.jboss.teiid.modeshape:teiid-modeshape-core</include>
+            </includes>
+
+            <binaries>
+                <outputDirectory>${jboss.kit.modules.location}/core/main</outputDirectory>
                 <includeDependencies>false</includeDependencies>
                 <unpack>false</unpack>
             </binaries>
@@ -43,8 +71,8 @@
     <fileSets>
         <!-- Teiid ModeShape DDL sequencer -->
         <fileSet>
-            <directory>kits/jboss/org/teiid/modeshape/sequencer/ddl/main</directory>
-            <outputDirectory>${jboss.kit.modules.location}/ddl/main</outputDirectory>
+            <directory>kits/jboss/org/jboss/teiid/modeshape/sequencer/ddl/main</directory>
+            <outputDirectory>${jboss.kit.modules.location}/sequencer/ddl/main</outputDirectory>
             <filtered>true</filtered>
             
             <includes>
@@ -54,8 +82,30 @@
 
         <!-- Teiid ModeShape VDB sequencer -->
         <fileSet>
-            <directory>kits/jboss/org/teiid/modeshape/sequencer/vdb/main</directory>
-            <outputDirectory>${jboss.kit.modules.location}/vdb/main</outputDirectory>
+            <directory>kits/jboss/org/jboss/teiid/modeshape/sequencer/vdb/main</directory>
+            <outputDirectory>${jboss.kit.modules.location}/sequencer/vdb/main</outputDirectory>
+            <filtered>true</filtered>
+
+            <includes>
+                <include>module.xml</include>
+            </includes>
+        </fileSet>
+
+        <!-- Teiid ModeShape Dataservice sequencer -->
+        <fileSet>
+            <directory>kits/jboss/org/jboss/teiid/modeshape/sequencer/dataservice/main</directory>
+            <outputDirectory>${jboss.kit.modules.location}/sequencer/dataservice/main</outputDirectory>
+            <filtered>true</filtered>
+
+            <includes>
+                <include>module.xml</include>
+            </includes>
+        </fileSet>
+
+        <!-- Teiid ModeShape Dataservice sequencer -->
+        <fileSet>
+            <directory>kits/jboss/org/jboss/teiid/modeshape/core/main</directory>
+            <outputDirectory>${jboss.kit.modules.location}/core/main</outputDirectory>
             <filtered>true</filtered>
 
             <includes>
